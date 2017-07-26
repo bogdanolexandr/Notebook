@@ -141,4 +141,13 @@ public class Record {
 		this.lastChange = lastChange;
 	}
 
+	@Override
+	public String toString() {
+		return "Record [id=" + id + ", surname=" + surname + ", name=" + name + ", patronymic=" + patronymic
+				+ ", nickName=" + nickName + ", comment=" + comment + ", groups=" + groups + ", homePhoneNumber="
+				+ homePhoneNumber + ", mobilePhone=" + mobilePhone + ", anotherPhone=" + anotherPhone + ", email="
+				+ email + ", skype=" + skype + ", address=" + address + ", datesOfChanges=" + datesOfChanges
+				+ ", lastChange=" + lastChange + "]";
+	}
+
 }

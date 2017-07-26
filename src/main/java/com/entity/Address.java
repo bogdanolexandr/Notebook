@@ -1,7 +1,5 @@
 package com.entity;
 
-import java.util.List;
-
 public class Address {
 
 	private int id;
@@ -10,7 +8,6 @@ public class Address {
 	private String street;
 	private int houseNumber;
 	private int flatNumber;
-	private List<Record> records;
 
 	public int getId() {
 		return id;
@@ -60,12 +57,10 @@ public class Address {
 		this.flatNumber = flatNumber;
 	}
 
-	public List<Record> getRecords() {
-		return records;
-	}
-
-	public void setRecords(List<Record> records) {
-		this.records = records;
+	@Override
+	public String toString() {
+		return "Address [id=" + id + ", postcode=" + postcode + ", city=" + city + ", street=" + street
+				+ ", houseNumber=" + houseNumber + ", flatNumber=" + flatNumber + "]";
 	}
 
 }
