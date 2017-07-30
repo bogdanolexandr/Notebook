@@ -22,9 +22,15 @@ public class RecordView {
 	private final String STREET = "Street :";
 	private final String HOUSE_NUMBER = "House number :";
 	private final String FLAT_NUMBER = "Flat number :";
+	private final String ERROR = "not correct ";
+	private final String UNIQ_ERROR = "user with such name already exist";
+
+	public void showError(String message) {
+		System.out.println(ERROR + message);
+		System.out.println(UNIQ_ERROR);
+	}
 
 	public void show(Record record) {
-
 		System.out.println(NAME + record.getName());
 		System.out.println(SURNAME + record.getSurname());
 		System.out.println(PATRONYMIC + record.getPatronymic());
@@ -43,7 +49,6 @@ public class RecordView {
 		System.out.println(STREET + record.getAddress().getStreet());
 		System.out.println(HOUSE_NUMBER + record.getAddress().getHouseNumber());
 		System.out.println(FLAT_NUMBER + record.getAddress().getFlatNumber());
-
 	}
 
 }

@@ -26,7 +26,6 @@ public class Reader {
 	}
 
 	public Record read() {
-
 		String message = null;
 		boolean success = false;
 
@@ -93,13 +92,13 @@ public class Reader {
 			}
 
 		}
+		index = 0;
 		record.setAddress(address);
 		Date now = new Date();
 		Set<Date> dates = new HashSet<>();
 		dates.add(now);
 		record.setDatesOfChanges(dates);
 		record.setLastChange(now);
-
 		return record;
 	}
 

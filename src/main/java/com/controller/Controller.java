@@ -1,6 +1,7 @@
 package com.controller;
 
 import com.entity.Record;
+import com.exception.NotUniqRecord;
 import com.service.Service;
 import com.util.Reader;
 import com.view.RecordView;
@@ -18,8 +19,15 @@ public class Controller {
 	}
 
 	public void doProcess() {
-		Record record = reader.read();
-		service.setRecord(record);
+		while (true) {
+			Record record = reader.read();
+			try {
+				service.setRecord(record);
+				break;
+			} catch (NotUniqRecord e) {
+				view.showError(e.getMessage());
+			}
+		}
 		view.show(service.getRecord());
 	}
 
